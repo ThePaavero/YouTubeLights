@@ -1,0 +1,16 @@
+{
+	"name"             : "YouTube Lights",
+	"version"          : "1.0",
+	"manifest_version" : 2,
+	"description"      : "Doubleclick beside the player to dim the lights",
+	"content_scripts"  : [
+		{
+			"matches" : ["http://www.youtube.com/*"],
+			"js"      : ["js/jquery.js", "js/youtubelights.js"]
+		}
+	],
+	"permissions" : [
+		"http://youtube.com/",
+		"http://www.youtube.com/"
+	]
+}
