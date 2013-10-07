@@ -53,8 +53,9 @@ var YouTubeLights = function() {
 		});
 
 		$('#player-api').css({
-			'position': 'relative',
-			'z-index' : 801
+			'position'  : 'relative',
+			'z-index'   : 801,
+			'box-shadow': '3px 0px 20px 5px #000'
 		});
 
 		$('#movie_player').focus();
@@ -69,6 +70,7 @@ var YouTubeLights = function() {
 	var unDim = function()
 	{
 		$('#youtube_dimmer').remove();
+		$('#player-api').attr('style', '');
 	};
 
 };
