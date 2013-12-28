@@ -6,6 +6,8 @@ var YouTubeLights = function() {
 	this.init = function()
 	{
 		doListener();
+		setTimeout(removeAnnotations, 5000);
+		setTimeout(setHD, 3000);
 	};
 
 	var doListener = function()
@@ -71,6 +73,22 @@ var YouTubeLights = function() {
 	{
 		$('#youtube_dimmer').remove();
 		$('#player-api').attr('style', '');
+	};
+
+	var removeAnnotations = function()
+	{
+		$('#movie_player').find('.annotation, svg').remove();
+	};
+
+	var setHD = function()
+	{
+		$('.ytp-button').each(function()
+		{
+			if($(this).html().indexOf('720') > -1 || $(this).html().indexOf('1080') > -1)
+			{
+				$(this).click();
+			}
+		});
 	};
 
 };
